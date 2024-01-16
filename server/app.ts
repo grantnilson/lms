@@ -18,7 +18,6 @@ app.get("/test", (req: Request, res: Response, next: NextFunction) => {
     })
 })
 
-
 app.all("*", (req: Request, res: Response, next: NextFunction) => {
     const error = new Error(`Route ${req.originalUrl} not found`) as Error
     error.message = "404"
